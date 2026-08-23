@@ -1,0 +1,1 @@
+opencode run --format json "Read the file non_existent.txt. Count the number of lines in it. Then write a file named output_failure.txt with the content 'The file non_existent.txt has X lines', where X is the line count. If the file is not found, report an error."

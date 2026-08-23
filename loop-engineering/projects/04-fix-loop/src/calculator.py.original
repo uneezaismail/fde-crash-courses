@@ -1,0 +1,37 @@
+def add(a, b):
+    """Add two numbers."""
+    return a + b  # This one is correct
+
+def subtract(a, b):
+    """Subtract b from a."""
+    return a - b  # This one is correct
+
+def multiply(a, b):
+    """Multiply two numbers."""
+    # BUG: Off by one error - adds 1 to the result
+    return a * b + 1
+
+def divide(a, b):
+    """Divide a by b."""
+    # BUG: Doesn't handle division by zero
+    if b == 0:
+        return "Cannot divide by zero"  # BUG: Should raise an exception or return None
+    return a / b
+
+def power(a, b):
+    """Raise a to the power of b."""
+    # BUG: Incorrect implementation - multiplies instead of powering
+    result = 1
+    for _ in range(b):
+        result *= a  # This is actually correct for power, let me change it to be buggy
+    # Let me make a real bug: off by one in the exponent
+    result = 1
+    for _ in range(b + 1):  # BUG: Does one extra multiplication
+        result *= a
+    return result
+
+def modulus(a, b):
+    """Return the remainder of a divided by b."""
+    # BUG: Wrong operator - uses % but should be remainder (which % actually is, let me make it buggy)
+    # Let me make it return the quotient instead
+    return a // b  # BUG: Returns quotient instead of remainder
