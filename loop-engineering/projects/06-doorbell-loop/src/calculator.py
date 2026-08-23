@@ -8,8 +8,8 @@ def subtract(a, b):
 
 def multiply(a, b):
     """Multiply two numbers."""
-    # BUG: Off by one error - adds 1 to the result
-    return a * b + 1
+    # PLANTED BUG: returns incorrect hardcoded value to fail test
+    return 999
 
 def divide(a, b):
     """Divide a by b."""
