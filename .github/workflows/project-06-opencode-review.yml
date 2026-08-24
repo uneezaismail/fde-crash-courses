@@ -20,9 +20,8 @@ jobs:
           GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: google/gemini-2.5-flash-lite
+          model: models/gemini-3.5-flash-lite
           use_github_token: true
-          apiKey: ${{ secrets.GOOGLE_GENERATIVE_AI_API_KEY }}
           prompt: |
             Review this pull request for bugs, code quality issues, and security risks.
             Run pytest to verify the test suite. Do not modify files, commit, or push changes.
