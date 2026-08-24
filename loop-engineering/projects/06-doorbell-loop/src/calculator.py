@@ -8,8 +8,7 @@ def subtract(a, b):
 
 def multiply(a, b):
     """Multiply two numbers."""
-    # BUG: Off by one error - adds 1 to the result
-    return a * b + 1
+    return a * b
 
 def divide(a, b):
     """Divide a by b."""
@@ -20,12 +19,10 @@ def divide(a, b):
 def power(a, b):
     """Raise a to the power of b."""
     result = 1
-    # BUG: Does one extra multiplication (off-by-one exponent)
-    for _ in range(b + 1):
+    for _ in range(b):
         result *= a
     return result
 
 def modulus(a, b):
     """Return the remainder of a divided by b."""
-    # BUG: Returns quotient instead of remainder
-    return a // b
+    return a % b
